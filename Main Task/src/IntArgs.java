@@ -5,7 +5,7 @@ public class IntArgs {
         int mult = 1;
         int[] args2 = new int[args.length];
         for( int i = 0 ; i < args.length ; i++) {
-            args2[i] = Integer.parseInt(args[i]);
+            args2[i] = Integer.parseInt(args[i]);//преобразование строкового массива в целочисленный
             sum = sum + args2[i];
             mult = mult * args2[i];
         }
