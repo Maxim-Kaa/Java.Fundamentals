@@ -2,10 +2,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class NumberOfMonth {
-    public static void main(String[] args) throws InputMismatchException {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите число от 1 до 12");
-        int month = sc.nextInt();
+        try {
+            int month = sc.nextInt();
         switch(month) {
             case 1:
                 System.out.println("Январь");
@@ -44,7 +45,10 @@ public class NumberOfMonth {
                 System.out.println("Декабрь");
                 break;
             default:
-                throw new InputMismatchException("Число вне требуемого диапазона - " + month);
+                System.out.println("Число вне требуемого диапазона");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Вы не ввели число");
         }
     }
 }
